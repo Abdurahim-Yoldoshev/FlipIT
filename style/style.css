@@ -28,11 +28,12 @@ body {
 .nav{
   width: 100%;
   height: auto;
-  box-shadow: 0 0 10px #212121;
+  box-shadow: 0 0 3px #cccccccc;
   position: fixed;
   z-index: 999;
-  background-color: #242830;  
+  background-color: #242830;
   top: 0;
+  filter: blur();
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +49,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
+  width: 90%;
   height: 85px;
 }
 
@@ -95,6 +96,24 @@ ul li {
   align-items: center;
 }
 
+/* =================== Home ======================= */
+
+.home{
+  height: 100vh;
+}
+
+.con{
+  margin-top: 2rem;
+  height: 50px;
+  width: 120px;
+  background-color: var(--secondry-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 #man{
   height: 100%;
@@ -125,8 +144,8 @@ ul li {
   color:var(--secondry-color);
 }
 
-#contactBtn:hover{
-  background: none;
+#contactBtn::after{
+  display: none;
 }
 
 ul li::after{
@@ -201,51 +220,44 @@ ul li:active::after{
   }
 }
 
-@keyframes hover {
-  100%{
-    width: 100%;
-  }
-}
-
-.js{
-  width: 300px;  
-  height: 300px;
-  border-radius: 10px;
-  background-color:#7b422e69;
-  border: 3px solid var(--secondry-color);
-}
-
-.jsImg img{
-  border-radius: 5px;
-  height: 125px;
-  width: 125px;
-  margin-left: 87.5px;
-  margin-top: 4rem;
-}
-
-.jsText{
-  text-align: center;
-}
-
-.jsText h2{
-  color: var(--secondry-color);
-}
-
-.status{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 25rem;
-}
-
 .footer{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   background-color: var(--secondry-color-hover);
+  margin-top: 13vh;
+}
+
+.miniFooter{
+  height: 100%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
+}
+
+.url{
+  display: flex;
+  width: 150px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.url h1 a{
+  color: #f1f1f1;
+  transition: 0.5s ease;
+}
+
+.url h1{
+  scale: 85%;
+}
+
+.url h1 a:hover{
+  color: var(--secondry-color);
 }
 
 .copy{
@@ -304,4 +316,78 @@ ul li:active::after{
   width: 100%;
 }
 
-/* hello */
+.skills{
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.foiz{
+  width: 50%;
+  height: 100%;
+}
+
+.foiz .block{
+  height: 7px;
+  width: 80%;
+  border-radius: 3px;
+  box-shadow: 0 0 2px #cccccccc;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.foiz .js .block::after{
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  background-color: var(--secondry-color);
+}
+
+.foiz .photoshop .block::after{
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  background-color: var(--secondry-color);
+}
+
+.foiz .css .block::after{
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  background-color: var(--secondry-color);
+}
+
+.foiz .node .block::after{
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  background-color: var(--secondry-color);
+}
+
+.foiz .ts .block::after{
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background-color: var(--secondry-color);
+}
+
+.skins{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-weight: 500;
+}
+
+.skillsText{
+  width: 40%;
+  height: 100%; 
+}
